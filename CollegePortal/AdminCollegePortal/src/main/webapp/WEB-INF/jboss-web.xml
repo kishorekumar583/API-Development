@@ -1,0 +1,7 @@
+<jboss-web>
+	 <context-root>college_admin</context-root>
+	<!-- <resource-ref>
+		<res-ref-name>jdbc/college</res-ref-name>
+		<jndi-name>java:/jdbc/college</jndi-name>
+	</resource-ref>  -->
+</jboss-web>
