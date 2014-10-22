@@ -10,7 +10,8 @@
 	</modules>
 	<properties>
 		<spring.version>4.1.1.RELEASE</spring.version>
-		<jerseyspring.version>1.10</jerseyspring.version>
+		<jerseyspring.version>1.18</jerseyspring.version>
+		<guava.version>18.0</guava.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -43,8 +44,29 @@
 				<artifactId>spring-web</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
 
 			<!-- jersey spring -->
+
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-core</artifactId>
+				<version>${jerseyspring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>${jerseyspring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-json</artifactId>
+				<version>${jerseyspring.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.sun.jersey.contribs</groupId>
@@ -71,8 +93,25 @@
 						<groupId>org.springframework</groupId>
 						<artifactId>spring-context</artifactId>
 					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-aop</artifactId>
+					</exclusion>
 				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<!-- or whatever version you use -->
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
