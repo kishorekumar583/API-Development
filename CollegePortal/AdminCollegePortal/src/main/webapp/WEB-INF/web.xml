@@ -20,9 +20,8 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- <listener>
-		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
-	</listener> -->
+	<!-- <listener> <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class> 
+		</listener> -->
 	<servlet>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
@@ -50,5 +49,12 @@
 		<servlet-name>jersey-serlvet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
+
+	<resource-ref>
+		<description>collegeDataSource</description>
+		<res-ref-name>java:/jdbc/college</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
 
 </web-app>

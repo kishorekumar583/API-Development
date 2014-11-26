@@ -10,17 +10,26 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType
 @XmlAccessorType(XmlAccessType.NONE)
 public class SampleResponse {
+	@XmlElement(name = "ResponseCode")
+	private int responseCode;
+
 	@XmlElement
-	private int sample;
+	private int customerId;
 
-	public int getSample() {
-		return sample;
+	public int getResponseCode() {
+		return responseCode;
 	}
 
-	public void setSample(int sample) {
-		this.sample = sample;
+	public void setResponseCode(int responseCode) {
+		this.responseCode = responseCode;
 	}
-	
-	
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 
 }

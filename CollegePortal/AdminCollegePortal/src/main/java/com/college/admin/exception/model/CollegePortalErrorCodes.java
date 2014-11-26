@@ -2,7 +2,9 @@ package com.college.admin.exception.model;
 
 public enum CollegePortalErrorCodes {
 
-	DATABASE_EXCEPTION("INPUT", "DB_EXCEPTION", "Database connection exception");
+	DATABASE_EXCEPTION("INPUT", "DB_EXCEPTION", "Database connection exception"),
+	INTERNAL_ERROR("INPUT", "DB_EXCEPTION", "Database connection exception"),
+	DUPLICATE_KEY_EXCEPTION("INPUT", "DB_EXCEPTION", "Duplicate key userid already exist");
 
 	private String source;
 	private String reasoncode;

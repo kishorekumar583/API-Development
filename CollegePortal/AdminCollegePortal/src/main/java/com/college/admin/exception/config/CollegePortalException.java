@@ -5,6 +5,10 @@ import com.college.admin.exception.model.Error;
 import com.college.admin.exception.model.Errors;
 
 public class CollegePortalException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Errors errors;
 
 	public CollegePortalException() {
